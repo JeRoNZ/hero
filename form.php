@@ -34,10 +34,11 @@
     <?php  echo isset($btFieldsRequired) && in_array('page', $btFieldsRequired) ? '<small class="required">' . t('Required') . '</small>' : null; ?>
     <?php  echo Core::make("helper/form/page_selector")->selectPage($view->field('page'), $page); ?>
 </div>
-<div class="form-group">
-	<?php  echo $form->label('page_text', t("Page Link") . " " . t("Text")); ?>
-    <?php  echo $form->text($view->field('page_text'), $page_text, array()); ?>
-</div>
+
+<!--<div class="form-group">-->
+<!--	--><?php // echo $form->label('page_text', t("Page Link") . " " . t("Text")); ?>
+<!--    --><?php // echo $form->text($view->field('page_text'), $page_text, array()); ?>
+<!--</div>-->
 
 <p>- Or -</p>
 
@@ -52,15 +53,15 @@
 if ($file_1 > 0) {
 	$file_1_o = File::getByID($file_1);
 } ?>
-<div class="form-group" style="display:none">
+<div class="form-group">
 	<?php echo $form->label($view->field('file_1'), t("File")); ?>
 	<?php echo isset($btFieldsRequired) && in_array('file_1', $btFieldsRequired) ? '<small class="required">' . t('Required') . '</small>' : null; ?>
 	<?php echo Core::make("helper/concrete/asset_library")->file('ccm-b-file-file_1-' . $identifier_getString, $view->field('file_1'), t("Choose File"), $file_1_o); ?>
 </div>
-<div class="form-group" style="display:none">
-	<?php echo $form->label($view->field('file_1_title'), t("File") . " " . t("Title")); ?>
-	<?php echo $form->text($view->field('file_1_title'), $file_1_title, array (
-		'maxlength' => 255,
-		'placeholder' => NULL,
-	)); ?>
-</div>
+<!--<div class="form-group">-->
+<!--	--><?php //echo $form->label($view->field('file_1_title'), t("File") . " " . t("Title")); ?>
+<!--	--><?php //echo $form->text($view->field('file_1_title'), $file_1_title, array (
+//		'maxlength' => 255,
+//		'placeholder' => NULL,
+//	)); ?>
+<!--</div>-->
