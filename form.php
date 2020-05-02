@@ -65,3 +65,20 @@ if ($file_1 > 0) {
 //		'placeholder' => NULL,
 //	)); ?>
 <!--</div>-->
+
+
+<script type="text/javascript">
+    $(function () {
+        $("#colour").spectrum({"color":false,"appendTo":".ui-dialog","containerClassName":"","replacerClassName":"","flat":false,"showInput":true,"allowEmpty":true,"showButtons":false,"clickoutFiresChange":true,"showInitial":true,"showPalette":true,"showPaletteOnly":false,"hideAfterPaletteSelect":true,"togglePaletteOnly":false,"showSelectionPalette":false,"localStorageKey":false,"preferredFormat":"rgb","showAlpha":true,"disabled":false,"maxSelectionSize":7,"cancelText":"cancel","chooseText":"choose","togglePaletteMoreText":"more","togglePaletteLessText":"less","clearText":"Clear Color Selection","noColorSelectedText":"No Color Selected","theme":"sp-light","selectionPalette":[],"offset":null, hide: function(color) {
+                $('.sp-container').hide();
+            },
+            beforeShow: function(tinycolor) {
+                $('.sp-container').show();
+            },"palette":[["#ffffff","#000000","#ff0000","#ff8000","#ffff00","#008000","#0000ff","#4b0082","#9400d3"]]});
+    });
+</script><div class="form-group">
+	<?php echo $form->label($view->field('colour'), t("colour")); ?>
+	<?php echo $form->text($view->field('colour'), $colour, array (
+		'placeholder' => NULL,
+	)); ?>
+</div>

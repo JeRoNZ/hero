@@ -86,6 +86,7 @@ class Controller extends BlockController
         $this->requireAsset('redactor');
         $this->set('btFieldsRequired', $this->btFieldsRequired);
         $this->set('identifier_getString', Core::make('helper/validation/identifier')->getString(18));
+		$this->requireAsset('core/colorpicker');
     }
 
     public function save($args)

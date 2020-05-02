@@ -19,5 +19,6 @@
             <unsigned/>
         </field>
         <field name="file_1_title" type="C"/>
+        <field name="colour" type="C" size="25"/>
     </table>
 </schema>
